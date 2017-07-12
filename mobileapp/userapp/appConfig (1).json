@@ -1,0 +1,278 @@
+{
+  "services": {
+    "registration": {
+      "endpoints": [
+        {
+          "dataType": [
+            "parse",
+            "oneSignal"
+          ],
+          "urlRegex": null,
+          "url": null
+        }
+      ],
+      "active": false
+    },
+    "oneSignal": {
+      "active": false
+    },
+    "facebook": {
+      "active": false
+    },
+    "parse": {
+      "pushEnabled": false,
+      "active": false
+    },
+    "analytics": {
+      "active": false
+    },
+    "push": {
+      "active": false
+    }
+  },
+  "performance": {
+    "webviewPools": [
+      {
+        "urls": [
+          {
+            "disown": "reload"
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "usesGeolocation": true
+  },
+  "forms": {
+    "signupConfig": {
+      "formSelector": null,
+      "active": false,
+      "formInputs": []
+    },
+    "loginConfig": {
+      "loginIsFirstPage": false,
+      "formSelector": null,
+      "formInputs": []
+    },
+    "interceptForms": {
+      "forms": []
+    }
+  },
+  "styling": {
+    "androidStatusBarBackgroundColor": "#00695b",
+    "iosSidebarTextColor": "#333333",
+    "iosTintColor": "#0091fe",
+    "iosTitleColor": "#333333",
+    "androidTabBarIndicatorColor": "#000000",
+    "androidTabBarTextColor": "#000000",
+    "androidTabBarBackgroundColor": "#bdbdbd",
+    "androidSidebarSeparatorColor": "#585858",
+    "androidAccentColor": "#009688",
+    "androidPullToRefreshColor": "#777777",
+    "androidActionBarForegroundColor": "#FFFFFF",
+    "androidActionBarBackgroundColor": "#009688",
+    "androidSidebarForegroundColor": "#FFFCFF",
+    "androidSidebarBackgroundColor": "#00EBD5",
+    "androidTheme": "light",
+    "iosTheme": "light",
+    "navigationTitleImage": false,
+    "androidHideTitleInActionBar": false,
+    "iosSidebarFont": "AppleSDGothicNeo-Medium",
+    "showNavigationBar": true,
+    "showActionBar": true,
+    "iosHeaderImage": "https://gonativeio.s3.amazonaws.com/uploads/kvnyxc3c1p332_1499767842503.jpeg",
+    "icon": "https://gonativeio.s3.amazonaws.com/uploads/9uk8hrhhn6qh2_1499767301753.jpeg",
+    "hideWebviewAlpha": 0.5,
+    "disableAnimations": false,
+    "androidShowSplash": true,
+    "androidLaunchImages": {
+      "xxxhdpi": "https://s3.amazonaws.com/gonativeio/images_generated/1499767971767_2w0aa8u66ppyp_720x720.9.png",
+      "xxhdpi": "https://s3.amazonaws.com/gonativeio/images_generated/1499767971767_gkxm0t46eq9ng_540x540.9.png",
+      "xhdpi": "https://s3.amazonaws.com/gonativeio/images_generated/1499767971767_6xz2hbg8pmu1m_360x360.9.png",
+      "hdpi": "https://s3.amazonaws.com/gonativeio/images_generated/1499767971766_yuwcdnm0p5n7u_270x270.9.png",
+      "mdpi": "https://s3.amazonaws.com/gonativeio/images_generated/1499767971766_vttxhukxqrkrw_180x180.9.png"
+    },
+    "menuAnimationDuration": 0.15,
+    "transitionInteractiveDelayMax": 0.2
+  },
+  "navigation": {
+    "toolbarNavigation": null,
+    "navigationLevels": {
+      "active": false,
+      "levels": [
+        null
+      ]
+    },
+    "deepLinkDomains": [],
+    "iosShowRefreshButton": true,
+    "androidShowRefreshButton": true,
+    "ignorePageFinishedRegexes": [],
+    "redirects": [],
+    "navigationTitles": {
+      "titles": [
+        null
+      ]
+    },
+    "regexInternalExternal": {
+      "rules": [
+        {
+          "regex": "^(?!https?://).*",
+          "internal": false
+        },
+        {
+          "regex": "https?://([-\\w]+\\.)*facebook\\.com/login.php.*",
+          "internal": true
+        },
+        {
+          "regex": "https?://([-\\w]+\\.)*facebook\\.com/dialog.*",
+          "internal": true
+        },
+        {
+          "regex": "https?://([-\\w]+\\.)*facebook\\.com/v1\\.0/.*",
+          "internal": true
+        },
+        {
+          "regex": "https?://([-\\w]+\\.)*facebook\\.com/oauth.*",
+          "internal": true
+        },
+        {
+          "regex": "https?://([-\\w]+\\.)*facebook\\.com/v2\\.0/.*",
+          "internal": true
+        },
+        {
+          "regex": "https?://([-\\w]+\\.)*facebook\\.com/checkpoint.*",
+          "internal": true
+        },
+        {
+          "regex": "https?://([-\\w]+\\.)*facebook\\.com.*",
+          "internal": true
+        },
+        {
+          "regex": "https?://([-\\w]+\\.)*plus\\.google\\.com/share.*",
+          "internal": false
+        },
+        {
+          "regex": "https?://([-\\w]+\\.)*twitter\\.com/.*",
+          "internal": false
+        },
+        {
+          "regex": "https?://([-\\w]+\\.)*instagram\\.com/.*",
+          "internal": false
+        },
+        {
+          "regex": "https?://maps\\.google\\.com.*",
+          "internal": false
+        },
+        {
+          "regex": "https?://([-\\w]+\\.)*linkedin\\.com/.*",
+          "internal": false
+        },
+        {
+          "regex": "https?://([-\\w]+\\.)*google\\.com/maps/search/.*",
+          "internal": false
+        },
+        {
+          "regex": ".*",
+          "internal": true
+        }
+      ]
+    },
+    "sidebarNavigation": {
+      "menus": [
+        {
+          "name": "default",
+          "active": true,
+          "items": [
+            {
+              "label": "HOME-LOGIN",
+              "url": "http://e-pooling.azurewebsites.net/default.aspx",
+              "subLinks": []
+            },
+            {
+              "label": "ELECTION",
+              "url": "http://e-pooling.azurewebsites.net/elections.aspx",
+              "subLinks": []
+            },
+            {
+              "label": "SELECT SYMBOL",
+              "url": "http://e-pooling.azurewebsites.net/sltsymbol.aspx",
+              "subLinks": []
+            }
+          ]
+        },
+        {
+          "name": "loggedIn",
+          "active": false,
+          "items": [
+            {
+              "url": "http://e-pooling.azurewebsites.net/Default.aspx",
+              "label": "E-polling",
+              "subLinks": []
+            },
+            {
+              "url": "http://e-pooling.azurewebsites.net/Register.aspx",
+              "label": "Register",
+              "subLinks": []
+            },
+            {
+              "url": "http://e-pooling.azurewebsites.net/admin.aspx",
+              "label": "Admin",
+              "subLinks": []
+            }
+          ]
+        }
+      ],
+      "menuSelectionConfig": {
+        "redirectLocations": [
+          {
+            "regex": null,
+            "menuName": "default",
+            "loggedIn": false
+          },
+          {
+            "regex": ".*",
+            "menuName": "default",
+            "loggedIn": true
+          }
+        ]
+      }
+    },
+    "tabNavigation": {
+      "active": false,
+      "tabMenus": [
+        {
+          "id": "1",
+          "items": [
+            {
+              "subLinks": []
+            }
+          ]
+        }
+      ],
+      "tabSelectionConfig": [
+        {
+          "id": "1",
+          "regex": ""
+        }
+      ]
+    },
+    "iosPullToRefresh": true,
+    "androidPullToRefresh": true
+  },
+  "general": {
+    "deviceRegKey": "a5g4dz0076krkf23mraknh2ugw",
+    "publicKey": "mbyowj",
+    "appName": "E-POLLING-USER v2",
+    "initialUrl": "http://e-pooling.azurewebsites.net",
+    "forceScreenOrientation": null,
+    "useCrosswalkWebView": false,
+    "enableWindowOpen": true,
+    "useWKWebView": true,
+    "userAgentAdd": "gonative",
+    "iosBundleId": "io.gonative.ios.pwdqnz",
+    "androidPackageName": "io.gonative.android.pwdqnz",
+    "replaceStrings": [],
+    "userAgentRegexes": []
+  }
+}
