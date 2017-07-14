@@ -112,9 +112,10 @@
 
     </form>
 
-    <script src="Scripts/jquery-1.10.2.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-    <script src="Scripts/init.js" type="text/javascript"></script>
+    <link href="Content/fonts.googleapis.com" rel="stylesheet" type="text/css" />
+  <link href="Content/materialize.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Content/icon.css" />    <link href="Content/material-cards.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="Content/font-awesome.min.css" />
     <%--<script src="Scripts/bootstrap.min.js" type="text/javascript"></script>--%>
     <script>
     $(function() {

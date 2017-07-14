@@ -6,9 +6,10 @@
 <head runat="server">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>E-POLLING </title>
-    <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" type="text/css" />
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css" />
+    <link href="Content/fonts.googleapis.com" rel="stylesheet" type="text/css" />
+  <link href="Content/materialize.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Content/icon.css" />    <link href="Content/material-cards.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="Content/font-awesome.min.css" />
      <link rel="stylesheet" href="Content/dd.css" />
     <%--<link href="Content/bootstrap.min.css" rel="stylesheet" type="text/css"/>--%>
     <script src="Scripts/jquery-1.10.2.min.js" type="text/javascript"></script>
