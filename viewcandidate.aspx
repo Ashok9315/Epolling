@@ -84,7 +84,7 @@
 
 
     <script src="Scripts/jquery-1.10.2.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+    <script src="Scripts/materialize.min.js"></script>
     <script src="Scripts/init.js" type="text/javascript"></script>
 </body>
 </html>

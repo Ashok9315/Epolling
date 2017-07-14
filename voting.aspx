@@ -115,6 +115,8 @@
     <link href="Content/fonts.googleapis.com" rel="stylesheet" type="text/css" />
   <link href="Content/materialize.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="Content/icon.css" />    <link href="Content/material-cards.css" rel="stylesheet" type="text/css"/>
+      <script src="Scripts/materialize.min.js"></script>
+
     <link rel="stylesheet" href="Content/font-awesome.min.css" />
     <%--<script src="Scripts/bootstrap.min.js" type="text/javascript"></script>--%>
     <script>
