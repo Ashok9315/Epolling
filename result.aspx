@@ -22,27 +22,72 @@
                     <li><a href="Register.aspx">REGISTER</a></li>
                      <li style="text-transform:uppercase;">
                     <asp:LoginStatus ID="LoginStatus2" runat="server"/></li>
-                    
-
-                </ul>
-
-               
+                   
+                </ul>               
             </div>
-        </nav>
-   
+        </nav>  
         <div class="container">
             <h3>STATS:</h3>
             <br />
             <h4>Results:</h4>
+            <h4>Winner</h4>
+
+            <asp:GridView ID="GridView4" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" CellPadding="4" ForeColor="#333333" GridLines="None">
+                <AlternatingRowStyle BackColor="White" />
+                <Columns>
+                    <asp:BoundField DataField="NAME" HeaderText="NAME" SortExpression="NAME" ReadOnly="True" />
+                    <asp:BoundField DataField="STATE" HeaderText="STATE" SortExpression="STATE" />
+                     <asp:ImageField DataImageUrlField="photo" HeaderText="PHOTO" DataImageUrlFormatString="profile/{0}" >
+                     <ControlStyle Height="50px" Width="45px" />
+                     </asp:ImageField>
+                     <asp:ImageField DataImageUrlField="symbol" DataImageUrlFormatString="{0}" HeaderText="SYMBOL">
+                     <ControlStyle Height="50px" Width="65px" />
+                     </asp:ImageField>
+                    <asp:BoundField DataField="ADHAR-ID" HeaderText="ADHAR-ID" SortExpression="ADHAR-ID" />
+                    <asp:BoundField DataField="NO OF VOTES" HeaderText="NO OF VOTES" ReadOnly="True" SortExpression="NO OF VOTES" />
+                </Columns>
+                <EditRowStyle BackColor="#7C6F57" />
+                <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
+                <RowStyle BackColor="#E3EAEB" />
+                <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
+                <SortedAscendingCellStyle BackColor="#F8FAFA" />
+                <SortedAscendingHeaderStyle BackColor="#246B61" />
+                <SortedDescendingCellStyle BackColor="#D4DFE1" />
+                <SortedDescendingHeaderStyle BackColor="#15524A" />
+            </asp:GridView>
+            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:votingdatabase %>" SelectCommand=" select top 1 * from(select fname+' '+lname as 'NAME',state as 'STATE',photo as 'PHOTO',symbol as 'SYMBOL',stat1.candidate as 'ADHAR-ID',no_of_voters as 'NO OF VOTES' from
+ (SELECT candidate, COUNT(voter) AS no_of_voters  FROM  votes 
+ WHERE eid = @eid GROUP BY candidate )
+ as stat1,users1 as usr where stat1.candidate=usr.adharid
+ )t
+ ORDER BY 'NO OF VOTES' DESC">
+                <SelectParameters>
+                    <asp:QueryStringParameter Name="eid" QueryStringField="id" />
+                </SelectParameters>
+            </asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:votingdatabase %>" SelectCommand=" select top 1 * from(select fname+' '+lname as 'NAME',state as 'STATE',photo as 'PHOTO',symbol as 'SYMBOL',stat1.candidate as 'ADHAR-ID',no_of_voters as 'NO OF VOTES' from
+ (SELECT candidate, COUNT(voter) AS no_of_voters  FROM  votes 
+ WHERE eid = @eid GROUP BY candidate )
+ as stat1,users1 as usr where stat1.candidate=usr.adharid
+ )t
+ ORDER BY 'NO OF VOTES' DESC">
+                <SelectParameters>
+                    <asp:Parameter Name="eid" />
+                </SelectParameters>
+            </asp:SqlDataSource>
+            <br />
+                       <h4>Votes categorised by Candidate:</h4>
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" CellPadding="4" ForeColor="#333333" GridLines="None">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:BoundField DataField="NAME" HeaderText="NAME" SortExpression="NAME" ReadOnly="True" />
                     <asp:BoundField DataField="STATE" HeaderText="STATE" SortExpression="STATE" />
-                     <asp:ImageField DataImageUrlField="PHOTO" HeaderText="PHOTO" DataImageUrlFormatString="profile/{0}" >
+                     <asp:ImageField DataImageUrlField="photo" HeaderText="PHOTO" DataImageUrlFormatString="profile/{0}" >
                      <ControlStyle Height="50px" Width="45px" />
                      </asp:ImageField>
-                     <asp:ImageField DataImageUrlField="SYMBOL" DataImageUrlFormatString="{0}" HeaderText="SYMBOL">
+                     <asp:ImageField DataImageUrlField="symbol" DataImageUrlFormatString="{0}" HeaderText="SYMBOL">
                      <ControlStyle Height="50px" Width="65px" />
                      </asp:ImageField>
                     <asp:BoundField DataField="ADHAR-ID" HeaderText="ADHAR-ID" SortExpression="ADHAR-ID" />

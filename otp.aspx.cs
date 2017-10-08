@@ -63,8 +63,8 @@ public partial class otp : System.Web.UI.Page
             otp += character;
         }
         resultotp = otp;
-        sendmail(getemailid(Context.User.Identity.Name), "Yout OTP has enerated *do not reply*", "OTP:" + resultotp);
-        lblOTP.Text = "";
+        sendmail(getemailid(Context.User.Identity.Name), "Yout OTP has generated *do not reply*", "OTP:" + resultotp);
+        lblOTP.Text = resultotp;
     }
     
     private void sendmail(string email, string subject, string body)

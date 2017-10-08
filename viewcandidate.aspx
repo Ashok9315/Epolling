@@ -5,13 +5,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Matdaan - View Candidate</title>
+    <title>E-POLLING - View Candidate</title>
     <link href="Content/fonts.googleapis.com" rel="stylesheet" type="text/css" />
   <link href="Content/materialize.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="Content/icon.css" />    <link href="Content/material-cards.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="Content/font-awesome.min.css" />
 </head>
 <body>
+    <form runat="server">
     <!--Nav bar-->
     <nav class="teal" role="navigation">
         <div class="nav-wrapper container">
@@ -86,5 +87,5 @@
     <script src="Scripts/jquery-1.10.2.min.js" type="text/javascript"></script>
     <script src="Scripts/materialize.min.js"></script>
     <script src="Scripts/init.js" type="text/javascript"></script>
-</body>
+</form></body>
 </html>

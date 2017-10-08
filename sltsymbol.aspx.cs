@@ -42,7 +42,7 @@ public partial class sltsymbol : System.Web.UI.Page
         string str = ConfigurationManager.ConnectionStrings["votingdatabase"].ToString();
         SqlConnection con = new SqlConnection(str);
         con.Open();
-        SqlCommand cmd = new SqlCommand("select * from SYMBOLLIST where status =1", con);
+        SqlCommand cmd = new SqlCommand("select * from symbollist where status =1", con);
         SqlDataAdapter adp = new SqlDataAdapter(cmd);
         DataSet ds = new DataSet();
         adp.Fill(ds);
